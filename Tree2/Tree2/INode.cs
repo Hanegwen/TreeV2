@@ -12,7 +12,7 @@ namespace Tree2
         string Content { get; set; }
 
         bool IsReady { get; set; }
-        TreeNode Parent { get; set; }
+        INode Parent { get; set; }
         List<TreeNode> Children { get; set; }
 
         

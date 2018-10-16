@@ -9,8 +9,10 @@ namespace Tree2
         public string ID { get => ID; set => ID = value; }
         public string Content { get => Content; set => Content = value; }
         public bool IsReady { get => IsReady; set => IsReady = value; }
-        public TreeNode Parent { get => Parent; set => Parent = value; }
-        List<TreeNode> INode.Children { get => INode.Children; set => throw new NotImplementedException(); }
+        public INode Parent { get => Parent; set => Parent = value; }
+        List<TreeNode> INode.Children { get => children; set => children = value; }
+
+        List<TreeNode> children = new List<TreeNode>();
  
 
         public TreeNode(string ID, string Content, bool IsReady, INode Parent)

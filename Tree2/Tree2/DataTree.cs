@@ -8,9 +8,12 @@ namespace Tree2
     {
         public List<INode> branches = new List<INode>();
 
-        public void AddNewNodesForTrees()
+        public void AddNewNodesForTrees(string newData)
         {
+            Guid guid = new Guid();
 
+            TreeNode newNode = new TreeNode(guid.ToString(), newData, true, null);
+            branches.Add(newNode);
         }
 
         public INode Get(string Id, bool shouldGetBranch) //Needs to Decide Should Get Branch

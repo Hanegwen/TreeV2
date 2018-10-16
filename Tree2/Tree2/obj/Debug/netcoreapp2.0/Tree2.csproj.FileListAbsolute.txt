@@ -1,0 +1,11 @@
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\obj\Debug\netcoreapp2.0\Tree2.csprojAssemblyReference.cache
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\obj\Debug\netcoreapp2.0\Tree2.csproj.CoreCompileInputs.cache
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\obj\Debug\netcoreapp2.0\Tree2.AssemblyInfoInputs.cache
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\obj\Debug\netcoreapp2.0\Tree2.AssemblyInfo.cs
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\bin\Debug\netcoreapp2.0\Tree2.deps.json
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\bin\Debug\netcoreapp2.0\Tree2.runtimeconfig.json
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\bin\Debug\netcoreapp2.0\Tree2.runtimeconfig.dev.json
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\bin\Debug\netcoreapp2.0\Tree2.dll
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\bin\Debug\netcoreapp2.0\Tree2.pdb
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\obj\Debug\netcoreapp2.0\Tree2.dll
+E:\Columbia\Senior\Algorithms\TreeV2\Tree2\Tree2\obj\Debug\netcoreapp2.0\Tree2.pdb
