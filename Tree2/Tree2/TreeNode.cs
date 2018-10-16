@@ -6,10 +6,19 @@ namespace Tree2
 {
     class TreeNode : INode
     {
-        public string ID { get => ID; set => ID = value; }
-        public string Content { get => Content; set => Content = value; }
-        public bool IsReady { get => IsReady; set => IsReady = value; }
-        public INode Parent { get => Parent; set => Parent = value; }
+        string id = " ";
+        public string ID { get => id; set => id = value; }
+
+        string content = " ";
+        public string Content { get => content; set => content = value; }
+
+        bool isReady = false;
+        public bool IsReady { get => isReady; set => isReady = value; }
+
+        INode parent = null;
+        public INode Parent { get => parent; set => parent = value; }
+
+
         List<TreeNode> INode.Children { get => children; set => children = value; }
 
         List<TreeNode> children = new List<TreeNode>();

@@ -30,14 +30,15 @@ namespace Tree2
                         string newData = Console.ReadLine();
 
                         tree.AddNewNodesForTrees(newData);
-                        break;
+                        break; //Works
                     case "2":
                         break;
                     case "3":
+                        Console.WriteLine("What Node Would You Like");
                         string inputID = Console.ReadLine();
 
-                        tree.Get(inputID, true);
-                        break;
+                        Console.WriteLine(tree.Get(inputID, true));
+                        break; //Works
                     case "4":
                         string dataToAdd = Console.ReadLine();
                         string parentID = Console.ReadLine();
@@ -74,10 +75,12 @@ namespace Tree2
                 //Need to Add via Text File
             } while (KeepRunningInput);
 
-            foreach(TreeNode node in DataTree)
+            foreach(TreeNode node in tree.branches)
             {
                 Console.WriteLine(node.Content);
             }
+
+            Console.ReadLine();
         }
 
         

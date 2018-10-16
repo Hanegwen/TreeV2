@@ -10,9 +10,9 @@ namespace Tree2
 
         public void AddNewNodesForTrees(string newData)
         {
-            Guid guid = new Guid();
+            string Random = newData + branches.Count;
 
-            TreeNode newNode = new TreeNode(guid.ToString(), newData, true, null);
+            TreeNode newNode = new TreeNode(Random, newData, true, null);
             branches.Add(newNode);
         }
 
