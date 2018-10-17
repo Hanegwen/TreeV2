@@ -39,7 +39,7 @@ namespace Tree2
             }
         }
 
-        public void AddNode(string toAdd, string parentId) //Maybe Works
+        public void AddNode(string toAdd, string parentId) //Works
         {
             INode parent = null;
             foreach(INode branch in branches)
@@ -68,7 +68,24 @@ namespace Tree2
 
         public void MoveNode(string objectId, string parentId)
         {
+            foreach(INode branch in branches)
+            {
+                if(branch.ID == objectId)
+                {
+                    foreach (INode branch1 in branches)
+                    {
+                        if(branch1.ID == parentId)
+                        {
+                            branch.Parent.Children.Remove(branch);
+                            branch.Parent = branch1.Parent;
 
+                            branch.Parent.Children.Add(this);
+                        }
+                        
+                    }
+                        
+                }
+            }
         }
 
         public INode FindNodeID(string id) //Works

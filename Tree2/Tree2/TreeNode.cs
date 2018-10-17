@@ -30,6 +30,11 @@ namespace Tree2
             this.Content = Content;
             this.IsReady = IsReady;
             this.Parent = Parent;
+
+            if (Parent != null)
+            {
+                Parent.Children.Add(this);
+            }
         }
     }
 }

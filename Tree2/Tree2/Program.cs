@@ -32,6 +32,15 @@ namespace Tree2
                         tree.AddNewNodesForTrees(newData);
                         break; //Works
                     case "2":
+
+                        string[] TheBaseData = System.IO.File.ReadAllLines(@"E:\Columbia\Senior\Algorithms\TreeData.txt");
+
+                        for (int i = 0; i < TheBaseData.Length; i++)
+                        {
+                            TreeNode NewNode = new TreeNode(baseNode, TheBaseData[i]);
+
+                            nodes.Add(NewNode);
+                        }
                         break;
                     case "3":
                         Console.WriteLine("What Node Would You Like");
@@ -40,28 +49,36 @@ namespace Tree2
                         Console.WriteLine(tree.Get(inputID, true));
                         break; //Works
                     case "4":
+                        Console.WriteLine("What Data Would You LIke to Add");
                         string dataToAdd = Console.ReadLine();
+                        Console.WriteLine("What is the ID of Your Parent?");
                         string parentID = Console.ReadLine();
 
                         tree.AddNode(dataToAdd, parentID);
-                        break;
+                        break; //Works
                     case "5":
+                        Console.WriteLine("What Node Data");
                         string NodeToDelete = Console.ReadLine();
 
                         tree.DeleteNode(NodeToDelete);
-                        break;
+                        break; //Works
                     case "6":
+                        Console.WriteLine("What Node ID would you like to move");
                         string NodeToMove = Console.ReadLine();
+
+                        Console.WriteLine("Who is The New Parent?");
                         string NewParent = Console.ReadLine();
 
                         tree.MoveNode(NodeToMove, NewParent);
-                        break;
+                        break; //Works
                     case "7":
+                        Console.WriteLine("What Node via ID would you like to return?");
                         string IDOfNode = Console.ReadLine();
 
                         tree.FindNodeID(IDOfNode);
-                        break;
+                        break; //works
                     case "8":
+                        Console.WriteLine("What Node via Content would you like to return?");
                         string FindNodeContent = Console.ReadLine();
 
                         tree.FindNodeConent(FindNodeContent);
