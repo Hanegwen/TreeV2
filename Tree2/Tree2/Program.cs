@@ -33,14 +33,14 @@ namespace Tree2
                         break; //Works
                     case "2":
 
-                        string[] TheBaseData = System.IO.File.ReadAllLines(@"E:\Columbia\Senior\Algorithms\TreeData.txt");
+                        //string[] TheBaseData = System.IO.File.ReadAllLines(@"E:\Columbia\Senior\Algorithms\TreeData.txt");
+                        //Mike's Home
 
-                        for (int i = 0; i < TheBaseData.Length; i++)
-                        {
-                            TreeNode NewNode = new TreeNode(baseNode, TheBaseData[i]);
+                        string[] TheBaseData = System.IO.File.ReadAllLines(@"C:\workspace\TreeData.txt");
+                        //School
 
-                            nodes.Add(NewNode);
-                        }
+                        tree.AddNewNodesForTrees(TheBaseData);
+                        
                         break;
                     case "3":
                         Console.WriteLine("What Node Would You Like");
@@ -75,17 +75,17 @@ namespace Tree2
                         Console.WriteLine("What Node via ID would you like to return?");
                         string IDOfNode = Console.ReadLine();
 
-                        tree.FindNodeID(IDOfNode);
+                        Console.WriteLine(tree.FindNodeID(IDOfNode));
                         break; //works
                     case "8":
                         Console.WriteLine("What Node via Content would you like to return?");
                         string FindNodeContent = Console.ReadLine();
 
-                        tree.FindNodeConent(FindNodeContent);
+                        Console.WriteLine(tree.FindNodeConent(FindNodeContent));
                         break;
                     default:
                         KeepRunningInput = false;
-                        break;
+                        break; //works
                 }
 
                 //Need To Add via Console
@@ -98,6 +98,8 @@ namespace Tree2
             }
 
             Console.ReadLine();
+
+            tree.WriteOutLineFile();
         }
 
         
