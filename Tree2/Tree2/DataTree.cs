@@ -25,8 +25,10 @@ namespace Tree2
         void MakeParents()
         {
             int whiteForLast = 100;
+            
             for (int i = 0; i < branches.Count; i++)
             {
+                //INode currentParent = branches[0];
                 int count = 0;
                 foreach (char letter in branches[i].Content)
                 {
@@ -39,14 +41,15 @@ namespace Tree2
                         count += 3;
                     }
                 }
-
+                
                 //int count = nodes[i].ToString().TakeWhile(c => c == ' ').Count();
                 //int tabCount = nodes[i].ToString().TakeWhile(Char.).Count();
                 //Console.WriteLine("WhiteSpace " + count);
 
                 if (count > whiteForLast)
                 {
-                    branches[i].Parent = branches[i - 1];
+                    branches[i].Parent = branches[i-1].Parent;
+                    //branches = branches[i];
                 }
 
                 whiteForLast = count;
@@ -58,6 +61,9 @@ namespace Tree2
             string Random = newData + branches.Count;
 
             TreeNode newNode = new TreeNode(Random, newData, true, null);
+
+            
+
             branches.Add(newNode);
 
             MakeParents();
@@ -116,14 +122,18 @@ namespace Tree2
             branches.Add(newNode);
         }
 
-        public void DeleteNode(string objectId) //Works
+        public void DeleteNode(string objectName) //Works
         {
             foreach (INode branch in branches)
             {
-                if (branch.ID == objectId)
+                string localTreeNode = branch.Content.Replace("\t", "");
+                string localNewNode = objectName.Replace("\t", "");
+
+                if (localTreeNode.Trim().Equals(localNewNode.Trim()))
                 {
                     branch.Children.Clear();
                     branches.Remove(branch);
+                    break;
                 }
             }
         }
@@ -158,10 +168,11 @@ namespace Tree2
                 {
                     return branch;
                 }
-                else
-                {
-                    return null;
-                }
+                //else
+                //{
+                //    TreeNode fakeNode = new TreeNode("No Node Like This Exists", "No Node Here", true, null);
+                //    return fakeNode;
+                //}
             }
 
             return null;
@@ -171,14 +182,17 @@ namespace Tree2
         {
             foreach (INode branch in branches)
             {
-                if (branch.Content == content)
+                string localTreeNode = branch.Content.Replace("\t","");
+                string localNewNode = content.Replace("\t","");
+                if (localTreeNode.Trim().Equals(localNewNode.Trim()))
                 {
                     return branch;
                 }
-                else
-                {
-                    return null;
-                }
+                //else
+                //{
+                //    TreeNode fakeNode = new TreeNode("No Node Like This Exists", "No Node Here", true, null);
+                //    return fakeNode;
+                //}
             }
 
             return null;
